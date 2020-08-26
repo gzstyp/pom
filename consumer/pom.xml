@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <!-- Provider、Consumer 父工程：统一管理版本 -->
+    <parent>
+        <artifactId>pom</artifactId>
+        <groupId>com.fwtai</groupId>
+        <version>v1.0.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>consumer</artifactId>
+    <packaging>war</packaging>
+    <properties>
+    </properties>
+
+    <dependencies>
+        <!-- 加入接口依赖，Provider、Consumer 就可以不用写 interface 了 -->
+        <dependency>
+            <groupId>com.fwtai</groupId>
+            <artifactId>api</artifactId>
+            <version>v1.0.0</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+</project>
